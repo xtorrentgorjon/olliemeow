@@ -1,0 +1,11 @@
+apiVersion: v2
+name: olliemeow
+description: A Helm chart for Olliemeow
+
+type: application
+
+# Chart Version
+version: 0.1.0
+
+# Application Version
+appVersion: 0.1.0
