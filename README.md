@@ -9,5 +9,5 @@ Olliemeow is prepared to be installed via Helm Chart directly into a kubernetes 
 Chart includes templates to create necessary access rights.
 
 ```
-helm install olliewmeow olliemeow -n [namespace_name] --set configMap.slack_url=[slack_hook_url]
+helm install olliemeow chart/olliemeow -n [namespace_name] --set configMap.slack_url=[slack_hook_url]
 ```

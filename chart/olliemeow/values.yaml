@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: sendotux/olliemeow
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
@@ -19,11 +19,19 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: olliemeow-access
 
+configMap:
+  slack_url: https://hooks.slack.com/services/XXX/YYY/ZZZ
+
 podSecurityContext: {}
 
 securityContext: {}
 
-service: {}
+service:
+  type: ClusterIP
+  externalPort: 5000
+  internalPort: 5000
+  labels: {}
+  annotations: {}
 
 ingress: {}
 
